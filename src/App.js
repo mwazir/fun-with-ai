@@ -41,7 +41,7 @@ function App() {
       prompt: `${promptValue}`,
       response: `${apiGeneratedText}`
     }
-    const addData = push(dbRef, dataObj);
+    push(dbRef, dataObj);
     setPromptValue(() => {
       return "";
     })
@@ -50,7 +50,7 @@ function App() {
 
   // Update database whenever the API generates text (as long as it is not empty)
   useEffect(() => {
-    if (apiGeneratedText != "") {
+    if (apiGeneratedText !== "") {
       updateDatabase();
     }
   }, [apiGeneratedText])
@@ -142,7 +142,7 @@ function App() {
           </div>
         </main>
       <footer>
-        <p>Created by <a href="https://www.mwazir.com" target="_blank">Muhammad Wazir</a> for the Shopify Intern Challenge (Fall 2022)</p>          
+        <p>Created by <a href="https://www.mwazir.com" target="_blank" rel="noreferrer">Muhammad Wazir</a> for the Shopify Intern Challenge (Fall 2022)</p>          
       </footer>
     </div>
   );
