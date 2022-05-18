@@ -1,0 +1,28 @@
+/* Base Styles Partial */
+
+body {
+    background-color: $clr-darkGreen;
+    color: $clr-white;
+}
+
+.wrapper {
+    max-width: 600px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.App {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+header, main, footer {
+    flex-grow: 1;
+}

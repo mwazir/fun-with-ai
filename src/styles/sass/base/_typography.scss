@@ -1,0 +1,37 @@
+/* Typography */
+
+html, body {
+    font-size: 125%;
+    font-family: $ff-primary;
+    font-weight: $fw-regular;
+}
+
+h1 {
+    @include fontSize($fs-h1-large-desktop);
+    font-weight: $fw-bold;
+}
+
+h2 {
+    @include fontSize($fs-h2-large-desktop);
+    font-weight: $fw-bold;
+}
+
+p {
+    @include fontSize($fs-p-large-desktop);
+}
+
+@media screen and (max-width: 600px) {
+    h1 {
+            @include fontSize($fs-h1-landscape-mobile);
+            font-weight: $fw-bold;
+        }
+    
+        h2 {
+            @include fontSize($fs-h2-landscape-mobile);
+            font-weight: $fw-bold;
+        }
+    
+        p {
+            @include fontSize($fs-p-landscape-mobile);
+        }
+}

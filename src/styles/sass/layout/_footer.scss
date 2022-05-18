@@ -1,0 +1,20 @@
+/* Footer Styles Partial */
+
+footer {
+    width: 100%;
+    min-height: 50px;
+    max-height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $clr-Green;
+
+    p {
+        @include fontSize(14);
+        text-align: center;
+    }
+
+    a {
+        color: $clr-yellowGreen;
+    }
+}
