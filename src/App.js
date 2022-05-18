@@ -57,6 +57,7 @@ function App() {
 
   // Function to call API and retrieve response based on user prompt
   const handleApiCall = () => {
+    console.log(process.env.REACT_APP_API_KEY);
     const data = {
       prompt: `${promptValue}`,
       temperature: 0.5,
@@ -66,7 +67,7 @@ function App() {
       method: "POST",
       headers: {
         'Content-Type': "application/json",
-        Authorization: `Bearer ${apiKey}`
+        Authorization: `Bearer ${process.env.REACT_APP_API_KEY}`
       },
       body: JSON.stringify(data),
     })
