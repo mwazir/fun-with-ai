@@ -119,7 +119,7 @@ function App() {
               <ul>
               {/* Loop through responseArray which is an array of data objects stored in firebase and display data in list format accordingly */}
                 {
-                  responseArray.map((item, index) => {
+                  responseArray.slice(0).reverse().map((item, index) => {
                     return (
                       <li key={index}>
                         <div className="response-container">
