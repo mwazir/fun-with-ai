@@ -2,7 +2,6 @@
 import { useEffect, useState } from 'react';
 import { getDatabase, ref, push, onValue } from 'firebase/database';
 import firebase from './firebase';
-import apiKey from './apiKey';
 import './styles/sass/App.scss';
 
 function App() {
@@ -11,6 +10,7 @@ function App() {
   const [apiGeneratedText, setApiGeneratedText] = useState("");
   const [promptValue, setPromptValue] = useState("");
   const [responseArray, setResponseArray] = useState([]);
+  const apiKey = "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" 
   let tempResponseArray = [];
 
   // Function to render prompts and responses stored in firebase 
