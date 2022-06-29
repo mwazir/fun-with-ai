@@ -141,7 +141,7 @@ function App() {
           </div>
         </main>
       <footer>
-        <p>Created by <a href="https://www.mwazir.com" target="_blank" rel="noreferrer">Muhammad Wazir</a> for the Shopify Intern Challenge (Fall 2022)</p>          
+        <p>Designed and Built by <a href="https://www.mwazir.com" target="_blank" rel="noreferrer">Muhammad Wazir</a></p>          
       </footer>
     </div>
   );
