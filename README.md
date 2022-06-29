@@ -1,4 +1,4 @@
-# Fun with AI (AI-Powered Text Completion Engine API)
+# Fun with AI (AI-Powered Text Completion Application)
 
 ## Live site:
 - https://fun-with-ai-mw.netlify.app/
