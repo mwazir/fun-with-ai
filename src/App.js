@@ -1,4 +1,4 @@
-
+// imports
 import { useEffect, useState } from 'react';
 import { getDatabase, ref, push, onValue } from 'firebase/database';
 import firebase from './firebase';
@@ -56,7 +56,6 @@ function App() {
 
   // Function to call API and retrieve response based on user prompt
   const handleApiCall = () => {
-    console.log(process.env.REACT_APP_API_KEY);
     const data = {
       prompt: `${promptValue}`,
       temperature: 0.5,
@@ -113,14 +112,14 @@ function App() {
               <button onClick={handleSubmit}>Submit</button>
             </form>
             <div className="responses-container">
-              {/* Conditionally render "Responses" title if thee is at least once response */}
+              {/* Conditionally render "Responses" title if there is at least once response */}
               {
                 responseArray.length > 1 ? <h2>Responses</h2> : null
               }
               <ul>
-              {/* Loop through responseArray which is an array of data objects stored in firebase and display data in list format accordoingly */}
+              {/* Loop through responseArray which is an array of data objects stored in firebase and display data in list format accordingly */}
                 {
-                  responseArray.map((item, index) => {
+                  responseArray.slice(0).reverse().map((item, index) => {
                     return (
                       <li key={index}>
                         <div className="response-container">
@@ -142,7 +141,7 @@ function App() {
           </div>
         </main>
       <footer>
-        <p>Created by <a href="https://www.mwazir.com" target="_blank" rel="noreferrer">Muhammad Wazir</a> for the Shopify Intern Challenge (Fall 2022)</p>          
+        <p>Designed and Built by <a href="https://www.mwazir.com" target="_blank" rel="noreferrer">Muhammad Wazir</a></p>          
       </footer>
     </div>
   );
